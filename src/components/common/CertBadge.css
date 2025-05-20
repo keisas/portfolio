@@ -1,0 +1,16 @@
+.cert-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin: 0.25rem;
+    color: #fff;
+  }
+  
+  .basic {
+    background-color: #5c646a;
+  }
+  
+  .advanced {
+    background-color: #523091;
+  }

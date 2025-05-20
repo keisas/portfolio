@@ -1,0 +1,49 @@
+/* Projects.css */
+.projects-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .projects-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 1rem;
+    animation: scroll-loop 30s linear infinite;
+  }
+  
+  @keyframes scroll-loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .projects-title {
+    font-size: 1.5rem;
+    color: #92400e;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .projects-header {
+    display: flex;
+    justify-content: space-between; /* 両端に配置 */
+    align-items: center;            /* 垂直中央揃え */
+    border-bottom: 2px solid #92400e;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    align-content: bottom;
+  }

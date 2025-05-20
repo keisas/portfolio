@@ -1,0 +1,76 @@
+/* .presentation-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  } */
+
+  .presentation-header {
+    border-bottom: 2px solid #8b4513;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between; /* 両端に配置 */
+    align-items: center;            /* 垂直中央揃え */
+  }
+
+  .presentation-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8b4513;
+  }
+  
+  .presentation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .presentation-item {
+    padding: 0.5rem;
+    border-left: 4px solid #8b4513;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .presentation-item--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .presentation-item-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #8b4513;
+  }
+
+  .presentation-item-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+
+/*   
+  .presentation-date {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+  }
+  
+  .presentation-title {
+    font-weight: 600;
+  }
+  
+  .presentation-type {
+    font-size: 0.85rem;
+    color: #4b5563;
+  }
+  
+  .presentation-link {
+    margin-top: 0.25rem;
+    display: inline-block;
+    color: #1d4ed8;
+    font-size: 0.85rem;
+  } */

@@ -1,0 +1,30 @@
+
+  /* Color by category */
+  .skill-card {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin: 0.25rem;
+    color: #fff;
+  }
+
+  .backend {
+    background-color: #134b86;
+  }
+  .frontend {
+    background-color: #17692a;
+  }
+  .infra {
+    background-color: #bb9628;
+  }
+  .ml {
+    background-color: #e83e8c;
+  }
+  .database {
+    background-color: #523091;
+  }
+  
+  .automation {
+    background-color: #5f1313;
+  }

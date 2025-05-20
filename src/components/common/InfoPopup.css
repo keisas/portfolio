@@ -1,0 +1,119 @@
+
+  .help-icon {
+    font-size: 2rem;
+    color: #777;
+    margin-top: 1rem;
+  }
+
+
+  .info-popup-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .info-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  
+  
+  .info-popup-content {
+    user-select: text;
+  }
+  
+  .info-popup-content h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+  
+  .info-section {
+    margin-bottom: 1.2rem;
+  }
+  
+  .info-section h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .info-section ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .info-section li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  /* 色付きドット */
+  .dot {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+  }
+  
+  /* 色の定義 */
+  .blue { background-color: #3B82F6; }
+  .orange { background-color: #F59E0B; }
+  .pink { background-color: #E879F9; }
+  .green { background-color: #10B981; }
+  .red { background-color: #F43F5E; }
+  .yellow { background-color: #FBBF24; }
+  .indigo { background-color: #6366F1; }
+  
+  hr {
+    margin: 1rem 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  .info-popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* グレーの透過背景 */
+    z-index: 1999; /* ポップアップ本体より下に配置 */
+  }
+
+  .backend {
+    background-color: #134b86;
+  }
+  .frontend {
+    background-color: #17692a;
+  }
+  .infra {
+    background-color: #bb9628;
+  }
+  .ml {
+    background-color: #e83e8c;
+  }
+  .database {
+    background-color: #523091;
+  }
+  
+  .automation {
+    background-color: #5f1313;
+  }

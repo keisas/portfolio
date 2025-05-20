@@ -1,0 +1,54 @@
+.project-card {
+    flex: 0 0 260px;
+    margin: 10px 2px 30px 2px;
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    scroll-snap-align: center;
+  }
+  
+  .project-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .project-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #333;
+  }
+  
+  .project-links {
+    margin-top: 0.5rem;
+  }
+  
+  .project-links a {
+    margin: 0 0.5rem;
+    font-size: 0.85rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .project-links a:hover {
+    text-decoration: underline;
+  }
