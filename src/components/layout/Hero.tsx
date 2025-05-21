@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import avatarDevImg from '../assets/images/avatar_dev.png';
-import avatarSchoolImg from '../assets/images/avatar_school.png';
-import avatarFormalImg from '../assets/images/avatar_formal.png';
-import avatarNormalImg from '../assets/images/avatar_normal.png';
-import avatarNormal2Img from '../assets/images/avatar_normal2.png';
+import avatarDevImg from '../../assets/images/avatar_dev.png';
+import avatarSchoolImg from '../../assets/images/avatar_school.png';
+import avatarFormalImg from '../../assets/images/avatar_formal.png';
+import avatarNormalImg from '../../assets/images/avatar_normal.png';
+import avatarNormal2Img from '../../assets/images/avatar_normal2.png';
 
 import './Hero.css';
 
