@@ -33,7 +33,7 @@ export const projects: Project[] = [
       { label: 'EC2 (AWS)', category: 'infra' },
     ],
     githubUrl: 'https://github.com/keisas/rustysearch',
-    demoUrl: 'https://rustysearch.yonecoding.com'
+    demoUrl: 'https://youtu.be/Tkg7qqwnWqk'
   },
   
   {
@@ -58,6 +58,7 @@ export const projects: Project[] = [
       { label: 'FastAPI', category: 'backend' },
       { label: 'OpenAI API', category: 'infra' },
       { label: 'Docker', category: 'infra' },
+      { label: 'GitHub Actions', category: 'infra' },
       { label: 'EC2 (AWS)', category: 'infra' },
     ],
     githubUrl: 'https://github.com/keisas/selfyGPT',
@@ -70,7 +71,9 @@ export const projects: Project[] = [
     imageUrl: portfolioImg,
     techStack: [
       { label: 'React', category: 'frontend' },
+      { label: 'GitHub Actions', category: 'infra' },
       { label: 'S3 (AWS)', category: 'infra' },
+      { label: 'CloudFront (AWS)', category: 'infra' },
     ],
     githubUrl: 'https://github.com/keisas/portfolio',
     demoUrl: 'https://yonecoding.com'
