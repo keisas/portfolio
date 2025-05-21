@@ -1,4 +1,4 @@
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../Projects/ProjectCard';
 import { projects } from '../../data/projects';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import InfoPopup from '../common/InfoPopup';

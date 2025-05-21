@@ -16,7 +16,7 @@ const presentations = [
   },
 ];
 
-export default function PresentationSection() {
+export default function Presentation() {
   return (
     <div>
       <div className="profile-header">

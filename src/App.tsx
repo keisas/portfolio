@@ -1,6 +1,6 @@
-import WelcomeSection from "./components/Hero";
-import Profile from "./components/Profile/Profile";
-import Footer from "./components/Footer";
+import WelcomeSection from "./components/layout/Hero";
+import Profile from "./components/layout/Profile";
+import Footer from "./components/layout/Footer";
 
 import "./App.css";
 

@@ -1,19 +1,15 @@
 import SkillCard from "../common/SkillCard";
 import CertBadge from "../common/CertBadge";
-import Experience from "./Experience";
-import Timeline from "./Timeline";
 import InfoPopup from "../common/InfoPopup";
-import Projects from "../Projects/Projects";
-import PresentationSection from "./Presentation";
+import Experience from "../sections/Experience";
+import Timeline from "../sections/Timeline";
+import Projects from "../sections/Projects";
+import Presentation from "../sections/Presentation";
 import "./Profile.css";
 
 export default function Profile() {
   return (
     <section className="card">
-      {/* <h2 className="card-title">プロフィール</h2>
-      <p className="card-text">
-        情報工学専攻の大学院生。Rust, Python, SQL, バイオインフォマティクスに興味があります。
-      </p> */}
       <div className="profile-box cert full">
         <div className="profile-header">
           <h3 className="profile-heading">タイムライン</h3>
@@ -21,7 +17,6 @@ export default function Profile() {
         </div>
         <Timeline />
       </div>
-      
 
       <div className="profile-grid">
         <div className="profile-box full">
@@ -33,16 +28,9 @@ export default function Profile() {
           <div className="skill-list">
             <SkillCard label="Rust" category="backend" />
             <SkillCard label="Python" category="backend" />
-            {/* <SkillCard label="Go" category="backend" /> */}
             <SkillCard label="C++" category="backend" />
-            {/* <SkillCard label="Java" category="backend" /> */}
-            {/* <SkillCard label="React" category="frontend" /> */}
-            {/* <SkillCard label="Django" category="frontend" /> */}
             <SkillCard label="SQL" category="database" />
-            {/* <SkillCard label="PostgreSQL" category="database"/> */}
             <SkillCard label="Docker" category="infra" />
-            {/* <SkillCard label="GCP" category="infra" /> */}
-            {/* <SkillCard label="AWS" category="infra" /> */}
           </div>
         </div>
 
@@ -52,10 +40,6 @@ export default function Profile() {
             <InfoPopup />
           </div>
             <div className="skill-list">
-              {/* <SkillCard label="Rust" category="backend" /> */}
-              {/* <SkillCard label="Python" category="backend" /> */}
-              {/* <SkillCard label="PostgreSQL" category="database" /> */}
-              {/* <SkillCard label="Docker" category="infra" /> */}
               <SkillCard label="AWS" category="infra" />
               <SkillCard label="Kubernetes" category="infra" />
             </div>
@@ -78,7 +62,7 @@ export default function Profile() {
       </div>
 
       <div className="profile-box">
-        <PresentationSection />
+        <Presentation />
         </div>
 
       <div className="profile-box">
