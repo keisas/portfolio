@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+# ポートフォリオ（フロントエンド）
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+このリポジトリは、米山 慧（Satoshi Yoneyama）の個人ポートフォリオサイトのフロントエンドです。  
+React + TypeScript + Tailwind CSS によって構築されており、プロジェクトやスキルを紹介するだけでなく、検索AI「YoneyamaGPT」を通じた体験型の自己紹介が可能です
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 構成
 
-## Expanding the ESLint configuration
+- **React**: UIの構築
+- **Vite**: 高速なビルドと開発環境
+- **Tailwind CSS**: スタイリング
+- **GitHub Actions**: CI/CD (S3 への自動デプロイ)
+- **AWS S3 / CloudFront**: 静的ホスティング & CDN配信
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## ディレクトリ構成
+```
+.
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   └── icon.png
+├── src
+│   ├── App.css
+│   ├── App.tsx
+│   ├── assets
+│   │   ├── Avatar.svg
+│   │   └── images
+│   ├── components
+│   │   ├── Projects
+│   │   ├── common
+│   │   ├── layout
+│   │   └── sections
+│   ├── data
+│   │   └── projects.ts
+│   ├── index.css
+│   ├── main.tsx
+│   ├── types
+│   │   ├── svg.d.ts
+│   │   └── swiper-css.d.ts
+│   └── vite-env.d.ts
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.tsd
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 公開リンク
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 🖥️ Webサイト: [https://yonecoding.com](https://yonecoding.com)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+※ レスポンシブ対応済み（スマホ・PC）
+
+## YoneyamaGPTとは？
+
+本サイトには、独自に構築した検索AI「YoneyamaGPT」が統合されています。  
+自身のQAデータと連携した **Retrieval-Augmented Generation（RAG）構成** により、以下のような質問に答えることができます：
+
+- 「出身大学はどこ？」
+- 「Rustの制作物を教えて」
+- 「どんな分野に興味があるの？」
+- など
+
+　実際のバックエンド実装は [`keisas/selfyGPT`](https://github.com/keisas/selfyGPT) にて公開しています。
+
+## 🛠️ 開発・ビルド
+
+### 開発環境の起動
+
+```bash
+npm install
+npm run dev
