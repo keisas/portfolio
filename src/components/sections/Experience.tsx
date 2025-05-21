@@ -126,7 +126,7 @@ export default function Experience() {
                 </div>
                 <button className="toggle-button" 
                 onClick={(e) => {
-                    e.stopPropagation(); // ボタンだけのクリックではイベントを親に伝播させない
+                    e.stopPropagation(); 
                     toggle(index);
                   }}>
                     {openStates[index] ? "−" : "+"}

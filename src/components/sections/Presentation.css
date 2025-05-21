@@ -1,17 +1,10 @@
-/* .presentation-section {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  } */
-
   .presentation-header {
     border-bottom: 2px solid #8b4513;
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
     display: flex;
-    justify-content: space-between; /* 両端に配置 */
-    align-items: center;            /* 垂直中央揃え */
+    justify-content: space-between;
+    align-items: center;
   }
 
   .presentation-title {
@@ -51,26 +44,3 @@
     color: #777;
     margin-bottom: 0.5rem;
   }
-
-/*   
-  .presentation-date {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-bottom: 0.25rem;
-  }
-  
-  .presentation-title {
-    font-weight: 600;
-  }
-  
-  .presentation-type {
-    font-size: 0.85rem;
-    color: #4b5563;
-  }
-  
-  .presentation-link {
-    margin-top: 0.25rem;
-    display: inline-block;
-    color: #1d4ed8;
-    font-size: 0.85rem;
-  } */

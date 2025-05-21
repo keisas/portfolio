@@ -18,11 +18,10 @@ export default function Projects() {
         </div>
         <Swiper
           spaceBetween={30}
-        //   slidesPerView={3}
         breakpoints={{
-            0: { slidesPerView: 1 },          // スマホなど小さい画面幅
-            640: { slidesPerView: 2 },        // タブレット
-            1024: { slidesPerView: 3 },       // PC以上
+            0: { slidesPerView: 1 }, 
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
           loop={true}
           autoplay={{
