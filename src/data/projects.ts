@@ -23,7 +23,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'RustySearch',
-    description: 'Rust × PostgreSQL × Docker を用いた検索エンジン',
+    description: 'RustとPostgreSQLを用いた全文・意味ベース検索切替可能な検索エンジン。Docker構成でEC2上にデプロイし、ReactフロントからAPI連携',
     imageUrl: rustySearchImg,
     techStack: [
       { label: 'Rust', category: 'backend' },
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   
   {
     title: 'selfyGPT',
-    description: '自己紹介・説明を行うためのRAGシステム。ソースとなる質問-回答データ作成の補助からFast APIの起動までを実行',
+    description: '自己紹介用の質問応答システム。独自QAデータに基づくRAG構成をFastAPI+FAISSで実装し、OpenAI APIと連携',
     imageUrl: selfyGPTImg,
     techStack: [
       { label: 'Python', category: 'backend' },
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   
   {
     title: 'ポートフォリオ',
-    description: 'このサイト自体。React により構築されており、Vite によるビルド',
+    description: 'このサイト自体。React + TypeScript + Tailwindで構築され、GitHub ActionsによりS3/CloudFrontへ自動デプロイ',
     imageUrl: portfolioImg,
     techStack: [
       { label: 'React', category: 'frontend' },
@@ -81,7 +81,7 @@ export const projects: Project[] = [
   
   {
     title: '(Contribute) libcoffee',
-    description: 'FBVSを支援する Python ライブラリへのコントリビュート',
+    description: '研究室開発のFBVS支援ライブラリに対するコントリビュート。Python + RDKitでのフラグメント処理・構造変換の改善に貢献',
     imageUrl: libcoffeeImg,
     techStack: [
       { label: 'Python', category: 'backend' },

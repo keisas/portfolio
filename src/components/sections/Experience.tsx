@@ -19,7 +19,6 @@ const experiences: ExperienceItem[] = [
         techStack: [
             { label: 'Python', category: 'backend' },
             { label: 'C', category: 'backend' },
-            // { label: 'C++', category: 'backend' },
             { label: 'Scala', category: 'backend' },
             { label: 'Java', category: 'backend' },
             { label: 'Java (並列)', category: 'backend' },
@@ -68,7 +67,7 @@ const experiences: ExperienceItem[] = [
             { label: 'Zapier', category: 'automation' },
             { label: 'Power Automate', category: 'automation' },
         ],
-      description: '入社後2年に渡り、GCPの各種サービスを用いたPython、SQLの自動実行による製造業におけるデータ処理の自動化を中心に、GASを用いた顧客向けの業務改善システムの開発や、Python、ノーコードツールを用いた社内向けの業務改善システムの開発を経験。その後はVertex AIを絡めた図面データの構造化処理におけるロジック作成を担当。'
+      description: '入社後2年に渡り、GCPの各種サービスによるPython, SQLの自動実行を用いた製造業におけるデータ処理フローの構築を中心に、GASを用いた顧客向けの業務改善システムの開発や、Python、ノーコードツールを用いた社内向けの業務改善システムの開発を経験。入社2年目以降は、Vertex AIを絡めた図面データの構造化アプリケーションのロジック開発を担当。'
     },
     {
       title: '💼 ウト株式会社（アルバイト）',
@@ -82,10 +81,10 @@ const experiences: ExperienceItem[] = [
             { label: 'Docker', category: 'infra' },
             { label: 'GitHub', category: 'infra' },
         ],
-      description: '顧客向けCRMツールの開発や、現場の業務に必要な機械の台数や構成要素の算出支援ツールの開発を担当。CRMツールではGASを使用。算出支援ツールのバックエンドではDjangoを、フロントエンドではReactを使用しており、主にバックエンド、フロントエンド、データベースの連携部分の実装を担当。'
+      description: '顧客向けCRMツールの開発や、製造業の現場に必要な機械の台数や構成要素の算出支援ツールの開発を担当。CRMツールではGASを使用。算出支援ツールのバックエンドではFastAPIを、フロントエンドではReactを使用しており、主にバックエンド、フロントエンド、データベースの連携部分の実装を担当。'
     },
     {
-      title: '🧪 CyberAgent（短期インターン）',
+      title: '🧪 株式会社サイバーエージェント（短期インターン）',
       period: '2023年8月（2週間）',
       techStack: [
         { label: 'Go', category: 'backend' },
@@ -93,7 +92,7 @@ const experiences: ExperienceItem[] = [
         { label: 'MySQL', category: 'database' },
         { label: 'Github', category: 'infra' },
       ],
-      description: 'Go CollegeにてGo言語の基本的な文法や、NoSQLの基本的な操作方法を学習し、簡単なRESTful APIを実装。また挑戦としてpprofやApache Benchを用いたプロファイリングや、スタックトレース付きのログ出力の実装を経験。'
+      description: 'Go CollegeにてGo言語の基本的な文法や、NoSQLの基本的な操作方法を学習し、簡単なRESTful APIを実装。またpprofやApache Benchを用いたプロファイリングや、スタックトレース付きのログ出力にも挑戦し、可観測性の向上に取り組みました。'
     }
   ];
 
