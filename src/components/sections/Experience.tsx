@@ -74,7 +74,6 @@ const experiences: ExperienceItem[] = [
       period: '2025年4月 〜 現在',
         techStack: [
             { label: 'Python', category: 'backend' },
-            { label: 'Django', category: 'backend' },
             { label: 'GAS', category: 'backend' },
             { label: 'React (TS)', category: 'frontend' },
             { label: 'Firestore (GCP)', category: 'database' },
