@@ -3,6 +3,7 @@ import libcoffeeImg from '../assets/images/libcoffee.png';
 import portfolioImg from '../assets/images/portfolio.png';
 import repFragImg from '../assets/images/repfrag.png';
 import selfyGPTImg from '../assets/images/selfyGPT.png';
+import atcoderImg from '../assets/images/atcoder.png';
 
 export type TechCategory = 'backend' | 'frontend' | 'infra' | 'database' | 'ml' | 'automation' | 'basic';
 
@@ -48,6 +49,19 @@ export const projects: Project[] = [
     githubUrl: undefined,
     demoUrl: undefined
   },
+
+  {
+    title: '(Contribute) libcoffee',
+    description: '研究室開発のFBVS支援ライブラリに対するコントリビュート。Python + RDKitでのフラグメント処理・構造変換の改善に貢献',
+    imageUrl: libcoffeeImg,
+    techStack: [
+      { label: 'Python', category: 'backend' },
+      { label: 'RDKit', category: 'backend' },
+      { label: 'GitHub Actions', category: 'infra' },
+    ],
+    githubUrl: 'https://github.com/akiyamalab/libcoffee',
+    demoUrl: undefined
+  },
   
   {
     title: 'selfyGPT',
@@ -78,18 +92,19 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/keisas/portfolio',
     demoUrl: 'https://yonecoding.com'
   },
-  
+
   {
-    title: '(Contribute) libcoffee',
-    description: '研究室開発のFBVS支援ライブラリに対するコントリビュート。Python + RDKitでのフラグメント処理・構造変換の改善に貢献',
-    imageUrl: libcoffeeImg,
+    title: 'AtCoderでのアルゴリズム強化',
+    description: 'アルゴリズムとデータ構造の理解を深める目的で参加。C++を用いてレート1200手前（最高1197）まで到達。その後はRust学習時の土台として再活用。',
+    imageUrl: atcoderImg,
     techStack: [
-      { label: 'Python', category: 'backend' },
-      { label: 'RDKit', category: 'backend' },
-      { label: 'GitHub Actions', category: 'infra' },
+      { label: 'C++', category: 'backend' },
+      { label: 'Rust', category: 'backend' },
     ],
-    githubUrl: 'https://github.com/akiyamalab/libcoffee',
-    demoUrl: undefined
+    githubUrl: undefined,
+    demoUrl: 'https://atcoder.jp/users/keisa0'
   },
+  
+
 
 ];
