@@ -45,7 +45,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="profile-box cert full">
+          <div className="profile-box cert full" id="certification">
           <div className="profile-header">
             <h3 className="profile-heading-small">資格</h3>
             <InfoPopup />
@@ -57,15 +57,15 @@ export default function Profile() {
         </div>
       </div>
 
-      <div className="profile-box">
+      <div className="profile-box" id="experience">
         <Experience />
       </div>
 
-      <div className="profile-box">
+      <div className="profile-box" id="presentation">
         <Presentation />
         </div>
 
-      <div className="profile-box">
+      <div className="profile-box" id="projects">
         <Projects />
       </div>
     </section>
