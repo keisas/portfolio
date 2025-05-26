@@ -12,7 +12,7 @@ export default function WelcomeSection() {
   const [messages, setMessages] = useState([
     {
       role: "system",
-      content: "ようこそ！！！米山のポートフォリオへ！\n私はYoneyamaGPTです。このページや米山の基本情報についてお答えできます。\n下の入力欄に質問を入力してください。\n例えば、「出身の大学は？」「趣味は？」などです。\n質問内容によって私の衣装も変わります。（全5パターン）",
+      content: "ようこそ！！！米山のポートフォリオへ！\n私はYoneyamaGPTです。このページや米山の基本情報についてお答えできます。\n下の入力欄に質問を入力してください。\n例えば、「出身の大学は？」「最近見た映画は？」などです。\n質問内容によって私の衣装も変わります。（全5パターン）",
     },
   ]);
   const [question, setQuestion] = useState({ role: "user", content: "" });
