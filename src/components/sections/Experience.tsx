@@ -92,6 +92,22 @@ const experiences: ExperienceItem[] = [
         { label: 'Github', category: 'infra' },
       ],
       description: 'Go CollegeにてGo言語の基本的な文法や、NoSQLの基本的な操作方法を学習し、簡単なRESTful APIを実装。またpprofやApache Benchを用いたプロファイリングや、スタックトレース付きのログ出力にも挑戦し、可観測性の向上に取り組みました。'
+    },
+    {
+      title: '🧪 株式会社ソニー・インタラクティブエンタテインメント（短期インターン）',
+      period: '2025年8月（3週間）',
+      techStack: [
+        { label: 'Terraform', category: 'infra' },
+        { label: 'EKS (AWS)', category: 'infra' },
+        { label: 'Kubernetes', category: 'infra' },
+        { label: 'KEDA', category: 'infra' },
+        { label: 'Datadog', category: 'infra' },
+        { label: 'Locust', category: 'infra' },
+        { label: 'Splunk', category: 'infra' },
+        { label: 'Jenkins', category: 'automation' },
+        { label: 'GitHub', category: 'infra' },
+      ],
+      description: 'EKS上で稼働するPSNマイクロサービスのチューニングを担当。Locustによる負荷試験の実施、KEDAを用いたオートスケーリングの調整、DatadogやSplunkによるモニタリング分析を経験。Terraform・Jenkins・GitHubを利用したCI/CDフローに沿って本番環境へデプロイを行い、最大30%のPod数最適化を行いました。'
     }
   ];
 
