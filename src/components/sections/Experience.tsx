@@ -107,7 +107,7 @@ const experiences: ExperienceItem[] = [
         { label: 'Jenkins', category: 'automation' },
         { label: 'GitHub', category: 'infra' },
       ],
-      description: 'EKS上で稼働するPSNマイクロサービスのチューニングを担当。Locustによる負荷試験の実施、KEDAを用いたオートスケーリングの調整、DatadogやSplunkによるモニタリング分析を経験。Terraform・Jenkins・GitHubを利用したCI/CDフローに沿って本番環境へデプロイを行い、最大30%のPod数最適化を行いました。'
+      description: 'SREとしてEKS上で稼働するPSNマイクロサービスのチューニングを担当。Locustによる負荷試験の実施、KEDAを用いたオートスケーリングの調整、DatadogやSplunkによるモニタリング分析を経験。Terraform・Jenkins・GitHubを利用したCI/CDフローに沿って本番環境へデプロイを行い、最大30%のPod数最適化を行いました。'
     }
   ];
 
