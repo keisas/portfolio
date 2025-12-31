@@ -30,7 +30,11 @@
     color: #333;
   }
 
-  
+  @media (max-width: 640px) {
+    .info-popup {
+      width: 80%;
+    }
+  }
   
   .info-popup-content {
     user-select: text;
@@ -116,4 +120,21 @@
   
   .automation {
     background-color: #5f1313;
+  }
+
+  .close-button {
+    width: 100%;
+    padding: 0.45rem 0;
+    border-radius: 8px;
+    border: none;
+  
+    background-color: #777;
+    color: white;
+  
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    opacity: 0.85;
   }

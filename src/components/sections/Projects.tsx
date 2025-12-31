@@ -1,7 +1,7 @@
 import ProjectCard from '../Projects/ProjectCard';
 import { projects } from '../../data/projects';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import InfoPopup from '../common/InfoPopup';
+import { InfoPopup, LinkIconInfo, SkillColorInfo } from '../common/InfoPopup';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
@@ -13,8 +13,12 @@ export default function Projects() {
     return (
       <div>
         <div className="projects-header">
-          <h2 className="projects-title">制作物</h2>
-          <InfoPopup/>
+          <h2 className="projects-title">研究・個人 制作物</h2>
+          <InfoPopup>
+            <h4>制作物セクション説明</h4>
+            <LinkIconInfo />
+            <SkillColorInfo />
+          </InfoPopup>
         </div>
         <Swiper
           spaceBetween={30}
@@ -25,7 +29,7 @@ export default function Projects() {
           }}
           loop={true}
           autoplay={{
-            delay: 5000,
+            delay: 10000,
             disableOnInteraction: false,
           }}
           navigation={false}

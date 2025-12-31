@@ -10,19 +10,21 @@
   }
   
   .project-image {
-    width: 100%;
+    width: 104%;
+    margin-left: -2%;
     border-radius: 8px;
     object-fit: cover;
   }
   
   .project-title {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
     font-weight: bold;
   }
   
-  .project-desc {
-    font-size: 0.9rem;
+  .project-description {
+    font-size: 0.95rem;
     color: #555;
     margin: 0.5rem 0;
   }
@@ -52,3 +54,15 @@
   .project-links a:hover {
     text-decoration: underline;
   }
+
+  .project-icon-link {
+    color: #666;
+    /* transition: color 0.01s ease, transform 0.01s ease; */
+    /* padding: 4px; */
+  }
+  
+  .project-icon-link:hover {
+    color: #333;
+    /* transform: translateY(-1px); */
+  }
+  

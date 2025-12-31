@@ -1,0 +1,207 @@
+/* =========================
+   OutfitsPopUp.css
+   info-popup と統一したトーン
+   ========================= */
+
+/* --- Overlay / Backdrop --- */
+.outfits-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  
+  /* --- Modal --- */
+  .outfits-modal {
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+  
+    padding: 1rem 1.5rem;
+    width: 90%;
+    max-width: 420px;
+
+    max-height: 80vh;          /* ★ 追加 */
+    display: flex;             /* ★ 追加 */
+    flex-direction: column;    /* ★ 追加 */
+  
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* --- Title --- */
+  .outfits-modal h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+  
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* =========================
+     Grid
+     ========================= */
+  
+  .outfits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+
+    overflow-y: auto;     /* ★ 追加 */
+    flex-grow: 1;         /* ★ 追加 */
+  }
+  
+  /* --- Card --- */
+  .outfit-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 0.5rem 0.3rem;
+    text-align: center;
+  }
+  
+  /* --- Image Wrapper --- */
+  .outfit-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-bottom: 0.4rem;
+  }
+  
+  /* --- Image --- */
+  .outfit-image {
+    width: 80%;
+    height: auto;
+    transition: filter 0.2s ease, opacity 0.2s ease;
+  }
+
+  /* --- Locked (未解放) --- */
+  .outfit-card.locked .outfit-image {
+    filter: grayscale(100%) brightness(0);
+    opacity: 0.85;
+  }
+
+  /* --- Unlocked (解放済) --- */
+  .outfit-card.unlocked .outfit-image {
+    filter: none;
+    opacity: 1;
+  }
+  
+  /* --- Label --- */
+  .outfit-label {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .outfit-card.locked .outfit-label {
+    color: #999;
+  }
+  
+  /* =========================
+     Progress & Button
+     ========================= */
+  
+  .outfits-progress {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  /* --- Close Button --- */
+  .close-button {
+    width: 100%;
+    padding: 0.45rem 0;
+    border-radius: 8px;
+    border: none;
+  
+    background-color: #777;
+    color: white;
+  
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    opacity: 0.85;
+  }
+  
+  /* =========================
+     Responsive
+     ========================= */
+  
+  @media (max-width: 640px) {
+    .outfits-modal {
+      width: 80%;
+    }
+  }
+
+  /* --- Hint Overlay --- */
+.outfit-hint {
+    position: absolute;
+    inset: 0;
+  
+    background-color: rgba(0, 0, 0, 0.55);
+    color: white;
+  
+    font-size: 0.75rem;
+    line-height: 1.4;
+    padding: 0.5rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    text-align: center;
+    border-radius: 6px;
+  
+    opacity: 0;
+    pointer-events: none;
+  
+    transition: opacity 0.2s ease;
+  }
+  
+  /* hover / tap で表示 */
+  .outfit-card.locked:hover .outfit-hint {
+    opacity: 1;
+  }
+
+  .outfit-image-wrapper {
+    position: relative; /* ★ 必須 */
+  }
+
+  .new-badge {
+    display: inline-block;
+    margin-right: 0.4rem;
+    padding: 0.1rem 0.45rem;
+  
+    font-size: 0.65rem;
+    font-weight: bold;
+  
+    color: #7a5c00;
+    background-color: #f6e8a6; /* 黄色より・やや落ち着き */
+  
+    border-radius: 10px;
+    vertical-align: middle;
+  }
+
+  .outfits-subtitle {
+    margin: 4px 0 12px;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+  }

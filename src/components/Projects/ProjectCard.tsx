@@ -4,6 +4,8 @@ import SkillCard from '../common/SkillCard';
 import type { TechItem } from '../../data/projects';
 import { FaGithub } from 'react-icons/fa';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaFileAlt } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
 
 interface ProjectCardProps {
   title: string;
@@ -11,7 +13,9 @@ interface ProjectCardProps {
   imageUrl: string;
   techStack: TechItem[];
   githubUrl?: string;
+  youtubeUrl?: string;
   demoUrl?: string;
+  paperUrl?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -20,7 +24,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imageUrl,
   techStack,
   githubUrl,
+  youtubeUrl,
   demoUrl,
+  paperUrl,
 }) => {
   return (
     <div className="project-card">
@@ -40,9 +46,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="project-icon-link"
-              title="GitHub"
+              title="GitHubリポジトリを開く"
             >
               <FaGithub size={20} />
+            </a>
+          )}
+          {youtubeUrl && (
+            <a
+              href={youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-icon-link"
+              title="デモ動画(YouTube)を開く"
+            >
+              <FaYoutube size={20} />
             </a>
           )}
           {demoUrl && (
@@ -51,9 +68,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="project-icon-link"
-              title="Demo"
+              title="公開中のデモサイトを開く"
             >
               <FaExternalLinkAlt size={18} />
+            </a>
+          )}
+          {paperUrl && (
+            <a
+              href={paperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-icon-link"
+              title="論文・資料を開く"
+            >
+              <FaFileAlt size={18} />
             </a>
           )}
         </div>

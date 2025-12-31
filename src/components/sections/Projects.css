@@ -19,7 +19,7 @@
   .carousel-track {
     display: flex;
     gap: 1rem;
-    animation: scroll-loop 30s linear infinite;
+    animation: scroll-loop 120s linear infinite;
   }
   
   @keyframes scroll-loop {

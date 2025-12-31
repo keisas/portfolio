@@ -1,11 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import avatarDevImg from '../../assets/images/avatar_dev.png';
 import avatarSchoolImg from '../../assets/images/avatar_school.png';
 import avatarFormalImg from '../../assets/images/avatar_formal.png';
 import avatarNormalImg from '../../assets/images/avatar_normal.png';
 import avatarNormal2Img from '../../assets/images/avatar_normal2.png';
+import OutfitsPopUp from '../common/OutfitsPopUp';
+import { FaTshirt } from 'react-icons/fa';
 
 import './Hero.css';
+
+const SEEN_OUTFITS_KEY = "seenOutfits";
+const SEEN_ONCE_OUTFITS_KEY = "seenOnceOutfits";
 
 export default function WelcomeSection() {
   const [input, setInput] = useState("");
@@ -18,6 +23,49 @@ export default function WelcomeSection() {
   const [question, setQuestion] = useState({ role: "user", content: "" });
   const [avatarImage, setAvatarImage] = useState(avatarNormalImg);
   const [loading, setLoading] = useState(false);
+  const [showOutfits, setShowOutfits] = useState(false);
+  const [newOutfitAvailable, setNewOutfitAvailable] = useState(false);
+  const [seenOutfits, setSeenOutfits] = useState<Record<OutfitCategory, boolean>>(() => {
+    const stored = localStorage.getItem(SEEN_OUTFITS_KEY);
+    return stored
+      ? JSON.parse(stored)
+      : {
+          自己紹介: true,
+          技術: false,
+          キャリア: false,
+          "研究・学業": false,
+          雑談: false,
+        };
+  });
+  
+  const [seenOnceOutfits, setSeenOnceOutfits] = useState<Record<OutfitCategory, boolean>>(() => {
+    const stored = localStorage.getItem(SEEN_ONCE_OUTFITS_KEY);
+    return stored
+      ? JSON.parse(stored)
+      : {
+          自己紹介: true,
+          技術: false,
+          キャリア: false,
+          "研究・学業": false,
+          雑談: false,
+        };
+  });
+  
+
+  type OutfitCategory =
+  | "自己紹介"
+  | "技術"
+  | "キャリア"
+  | "研究・学業"
+  | "雑談";
+
+  
+  const handleSeenOnce = (key: OutfitCategory) => {
+    setSeenOnceOutfits(prev => ({
+      ...prev,
+      [key]: true,
+    }));
+  };
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -55,6 +103,15 @@ export default function WelcomeSection() {
               const category = match[1];
               categoryParsed = true;
 
+              // もともと見たことがない衣装なら、新しい衣装がアンロックされたことを示す
+              if (!seenOutfits[category as OutfitCategory]) {
+                setNewOutfitAvailable(true);
+                setSeenOutfits((prev) => ({
+                  ...prev,
+                  [category]: true,
+                }));
+              }
+
               switch (category) {
                 case "自己紹介": setAvatarImage(avatarNormalImg); break;
                 case "技術": setAvatarImage(avatarDevImg); break;
@@ -83,12 +140,32 @@ export default function WelcomeSection() {
     }
   };
 
+  useEffect(() => {
+    localStorage.setItem(SEEN_OUTFITS_KEY, JSON.stringify(seenOutfits));
+  }, [seenOutfits]);
+  
+  useEffect(() => {
+    localStorage.setItem(SEEN_ONCE_OUTFITS_KEY, JSON.stringify(seenOnceOutfits));
+  }, [seenOnceOutfits]);
+
+  //　未読の衣装が一つでもあればhasNewOutfitはtrue
+  useEffect(() => {
+    const hasNew = Object.entries(seenOutfits).some(([key, unlocked]) => {
+      return unlocked && !seenOnceOutfits[key as OutfitCategory];
+    });
+    setNewOutfitAvailable(hasNew);
+  }, [seenOutfits, seenOnceOutfits]);
+
   return (
     <div className="welcome-container">
       <CharacterWithBubble
         text={messages[messages.length - 1].content}
         question={question.content}
         avatar={avatarImage}
+        hasNewOutfit={newOutfitAvailable}
+        onClickInfo={() => {
+          setShowOutfits(true);
+        }}
       />
 
       <div className="chat-log">
@@ -105,6 +182,15 @@ export default function WelcomeSection() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="質問内容を入力して下さい..."
+          onKeyDown={(e) => {
+            // 日本語変換中（IME確定Enter）は無視
+            if (e.key === "Enter" && !e.nativeEvent.isComposing) {
+              e.preventDefault(); // 改行などを防ぐ
+              if (!loading && input.trim() !== "") {
+                handleSend();
+              }
+            }
+          }}
         />
         <button
           onClick={handleSend}
@@ -114,14 +200,33 @@ export default function WelcomeSection() {
           送信
         </button>
       </div>
+      <OutfitsPopUp
+        open={showOutfits}
+        seenOutfits={seenOutfits}
+        seenOnceOutfits={seenOnceOutfits}
+        onSeenOnce={handleSeenOnce}
+        onClose={() => setShowOutfits(false)}
+      />
     </div>
   );
 }
 
-function CharacterWithBubble({ question, text, avatar }: { question: string | null; text: string; avatar: string }) {
+function CharacterWithBubble({ question, text, avatar, onClickInfo, hasNewOutfit }: { question: string | null; text: string; avatar: string, onClickInfo?: () => void; hasNewOutfit: boolean }) {
   return (
     <div className="character-container">
-      <img src={avatar} className="avatar-svg" alt="avatar" />
+      <div className="avatar-wrapper">
+        <img src={avatar} className="avatar-svg" alt="avatar" />
+        <button
+          className={`avatar-info-button ${hasNewOutfit ? "has-new" : "no-new"}`}
+          onClick={onClickInfo}
+        >
+          <FaTshirt className="outfit-icon" />
+
+{hasNewOutfit && (
+  <span className="outfit-new-badge">New</span>
+)}
+        </button>
+      </div>
       <div className="bubble-container">
         {question && (
           <div className="question-bubble">

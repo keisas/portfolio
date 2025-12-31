@@ -1,6 +1,6 @@
 import SkillCard from "../common/SkillCard";
 import CertBadge from "../common/CertBadge";
-import InfoPopup from "../common/InfoPopup";
+import { InfoPopup, TimelineInfo, SkillColorInfo } from "../common/InfoPopup";
 import Experience from "../sections/Experience";
 import Timeline from "../sections/Timeline";
 import Projects from "../sections/Projects";
@@ -13,7 +13,10 @@ export default function Profile() {
       <div className="profile-box cert full">
         <div className="profile-header">
           <h3 className="profile-heading">タイムライン</h3>
-          <InfoPopup />
+          <InfoPopup>
+            <h4>タイムラインセクション説明</h4>
+            <TimelineInfo />
+          </InfoPopup>
         </div>
         <Timeline />
       </div>
@@ -22,7 +25,10 @@ export default function Profile() {
         <div className="profile-box full">
           <div className="profile-header">
             <h3 className="profile-heading-small">自信のあるスキル</h3>
-            <InfoPopup />
+            <InfoPopup>
+              <h4>スキルセクション説明</h4>
+              <SkillColorInfo />
+            </InfoPopup>
           </div>
          
           <div className="skill-list">
@@ -37,7 +43,10 @@ export default function Profile() {
         <div className="profile-box full">
           <div className="profile-header">
             <h3 className="profile-heading-small">重点的に学習中</h3>
-            <InfoPopup />
+            <InfoPopup>
+              <h4>スキルセクション説明</h4>
+              <SkillColorInfo />
+            </InfoPopup>
           </div>
             <div className="skill-list">
               <SkillCard label="AWS" category="infra" />
@@ -48,7 +57,10 @@ export default function Profile() {
           <div className="profile-box cert full" id="certification">
           <div className="profile-header">
             <h3 className="profile-heading-small">資格</h3>
-            <InfoPopup />
+            <InfoPopup>
+              <h4>スキルセクション説明</h4>
+              <SkillColorInfo />
+            </InfoPopup>
           </div>
           <div className="badge-list">
             <CertBadge label="応用情報技術者 (2023秋)" level="basic" />

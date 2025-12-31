@@ -1,7 +1,7 @@
 import './Experience.css';
 import type { TechItem } from '../../data/projects';
 import SkillCard from '../common/SkillCard';
-import InfoPopup from '../common/InfoPopup';
+import { InfoPopup, SkillColorInfo, CareerMarkInfo } from '../common/InfoPopup';
 import { useState } from "react";
 
 export interface ExperienceItem {
@@ -127,7 +127,11 @@ export default function Experience() {
     <div >
       <div className='profile-header'>
         <h3 className="profile-heading">経歴</h3>
-        <InfoPopup />
+        <InfoPopup>
+          <h4>経歴セクション説明</h4>
+          <CareerMarkInfo />
+          <SkillColorInfo />
+        </InfoPopup>
       </div>
       
       <div className="experience-list">

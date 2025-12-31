@@ -1,5 +1,4 @@
 import "./Presentation.css";
-import InfoPopup from "../common/InfoPopup";
 
 const presentations = [
   {
@@ -16,8 +15,17 @@ const presentations = [
   },
   {
     date: "2025年10月",
-    title: "ポスター発表予定 - CBI学会2025年大会",
+    title: "ポスター発表 - CBI学会2025年大会",
   },
+  {
+    date: "2025年11月",
+    title: "口頭発表 - 修士論文構想発表会",
+  },
+  {
+    date: "2025年12月",
+    title: "論文（第二著者） - bioRxiv掲載",
+
+  }
 ];
 
 export default function Presentation() {
@@ -25,7 +33,6 @@ export default function Presentation() {
     <div>
       <div className="profile-header">
         <h3 className="profile-heading">発表</h3>
-        <InfoPopup />
       </div>
       <div className="presentation-list">
         {presentations.map((pres, idx) => (
