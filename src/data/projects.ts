@@ -42,8 +42,8 @@ export const projects: Project[] = [
       { label: 'k6', category: 'infra' },
     ],
     demoUrl: 'https://yonecoding.com/adaptour_demo/',
-    youtubeUrl: 'https://youtu.be/1YQn6t0n8r8',
-    paperUrl: 'https://adaptour.github.io/'
+    youtubeUrl: 'https://youtu.be/wO31UFOBK5M',
+    paperUrl: 'https://drive.google.com/file/d/1A8LlGyr0NpI9-ra451t0uwlK79f56fQf/view?usp=sharing'
   },
 
   {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       { label: 'Docker', category: 'infra' },
     ],
     githubUrl: 'https://github.com/akiyamalab/coffee-presc',
-    paperUrl: 'https://doi.org/10.1016/j.jmgm.2023.108525'
+    paperUrl: 'https://doi.org/10.64898/2025.12.07.692874'
   },
 
   {
