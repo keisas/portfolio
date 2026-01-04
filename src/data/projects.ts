@@ -42,7 +42,7 @@ export const projects: Project[] = [
       { label: 'k6', category: 'infra' },
     ],
     demoUrl: 'https://yonecoding.com/adaptour_demo/',
-    youtubeUrl: 'https://youtu.be/wO31UFOBK5M',
+    youtubeUrl: 'https://www.youtube.com/watch?v=hhLxYqI6nvI',
     paperUrl: 'https://drive.google.com/file/d/1A8LlGyr0NpI9-ra451t0uwlK79f56fQf/view?usp=sharing'
   },
 
